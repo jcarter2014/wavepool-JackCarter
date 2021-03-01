@@ -12,7 +12,7 @@
 				</div>
 				<div><img src="media/image/placeholder-img.jpg"  width="300" height="175" /></div>
 				<div class="newspost-teaser" data-newspost-id="{{cover_story.pk}}">
-					{{ cover_story.teaser }} ...
+					{{ cover_story.teaser | striptags }} ...
 				</div>
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 						<span class="pubdate">{{newspost.publish_date}}</span>
 						<div class="frontpage-archive_link"><a href="{{ newspost.url }}">{{ newspost.title }}</a></div>
 						<div class="newspost-teaser" data-story_id="{{newspost.pk}}">
-							{{ newspost.teaser  }} ...
+							{{ newspost.teaser | striptags }} ...
 						</div>
 					<hr />
 					</div>
@@ -41,7 +41,7 @@
 						<span class="pubdate">{{newspost.publish_date}}</span>
 						<div class="frontpage-archive_link"><a href="{{ newspost.url }}">{{ newspost.title }}</a></div>
 						<div class="newspost-teaser" data-story_id="{{newspost.pk}}">
-							{{ newspost.teaser  }} ...
+							{{ newspost.teaser  | striptags }} ...
 						</div>
 					</div>
 					<hr />
