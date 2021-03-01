@@ -14,9 +14,12 @@ def front_page(request):
             archive: the rest of the newsposts, sorted by most recent
     """
     template = loader.get_template('wavepool/frontpage.html')
-    cover_story = NewsPost.objects.all().order_by('?').first()
-    top_stories = NewsPost.objects.all().order_by('?')[:3]
-    other_stories = NewsPost.objects.all().order_by('?')
+    # filter the NewsPost objects to find the one that is the cover story
+    cover_story = NewsPost.objects.all().filter(is_cover_story=True)
+    # filter the NewsPost objects that aren't the cover story and slice the most recent three out
+    top_stories = NewsPost.objects.all().filter(is_cover_story=False).order_by('publish_date')[:3]
+    # filter the next NewsPost objects that aren't the cover story and aren't the most recent three
+    other_stories = NewsPost.objects.all().filter(is_cover_story=False).order_by('publish_date')[3:]
 
     context = {
         'cover_story': cover_story,
