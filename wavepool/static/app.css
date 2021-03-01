@@ -1,0 +1,164 @@
+body {
+	font-size: 1rem;
+}
+
+body a {
+	color: #000;
+	font-weight: bold;
+}
+
+body a:hover {
+	color: #b7b2b2;
+	text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #b7b2b2;
+}
+
+h2 {
+	font-size: .9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #f94040;
+}
+
+.site-name#first {
+	font-weight: bold;
+}
+
+.site-name#second {
+	font-weight: normal;
+	margin-left: .05rem;
+}
+
+.site-name#logo {
+	margin-top: -.05rem;
+}
+
+#page_content {
+	margin-top: 2rem;
+}
+
+#coverstory {
+	background-color: #f9f9f9;
+	border: solid 1px #e6e6e6;
+	padding: 1rem;
+	margin-right: 1.2rem;
+}
+
+#coverstory a {
+	font-size: 1.2rem;
+}
+
+#topstories {
+	padding-top: 1rem;
+}
+
+#topstories a {
+	font-size: 1rem;
+}
+
+#frontpage-archive {
+	margin-top: 1.5rem;
+}
+
+.pubdate {
+	text-transform: uppercase;
+	color: #929090;
+	font-size: .7rem;
+	font-weight: bold;
+	display: block;
+}
+
+h1 .pubdate {
+	font-size: .9rem;
+}
+
+.newspost-detail h1 {
+	border-bottom: 1px solid #f94040;
+}
+
+.newspost-detail a {
+	color: #929090;
+}
+
+.newspost-detail a:hover {
+	color: #f94040;
+}
+
+.newspost-body {
+	margin-top: 1rem;
+	width: 90%;
+}
+
+.newspost-body a {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.newspost-body a:hover{
+	text-decoration: underline;
+}
+
+#instructions {
+	color: #000;
+	padding-bottom: 3rem;
+}
+
+#instructions ol {
+	padding: 0;
+}
+
+#instructions ol li.instructable {
+	padding-bottom: 1.5rem;
+}
+
+#instructions ul li.instructable-ac {
+	padding-bottom: .75rem;
+}
+
+#instructions ol h1 {
+	font-size: 1.1rem;
+}
+
+#instructions ol h2 {
+	font-size: 1rem;
+	font-weight: normal;
+	text-transform: none;
+	color: #000;
+}
+
+#instructions ol h3{
+	font-size: .9rem;
+}
+
+#instructions h2.card-title {
+	font-size: .9rem;
+	color: #000000;
+}
+
+#instructions h1.card-title {
+	font-size: 1.3rem;
+	margin-bottom: 0;
+}
+
+#instructions .card {
+	margin-bottom: 2rem;
+}
+
+#newspost-sponsorship {
+	border: solid 2px #000000;
+	margin-bottom: 3rem;
+}
+#newspost-sponsorship a:hover {
+	color: initial;
+}
+
+#sponsor-content {
+	background-color: #CCCCCC;
+}
+#sponsor-text {
+	margin-top: .7rem;
+	display: block;
+}
