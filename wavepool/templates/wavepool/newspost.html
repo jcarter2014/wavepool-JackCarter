@@ -19,13 +19,19 @@
 		<div class="col-2"></div>
 	</div>
 	<div class="newspost-detail">
+		{% if user.is_authenticated %}
 		<div class="row"><a id="edit-link" href=""><button>edit</button></a></div>
+		{% endif %}
+
+		{% if user.is_superuser %}
+		<div class="row"><a id="edit-link" href=""><button>admin page link here</button></a></div>
+		{% endif %}
 		<div class="row">
-			<h1 id="newspost-title">{{ newspost.title }}<span class="pubdate">{{newspost.publish_date}}</span></h1>
+			<h1 id="newspost-title">{{ newspost.title }} | Wavepool | Industry Dive<span class="pubdate">{{newspost.publish_date}}</span></h1>
 		</div>
 		<div class="row"><a href="{{newspost.source}}" target="_blank">See the live story at {{newspost.source_divesite_name}}</a></div>
 		<div class="row newspost-body">
-			{{ newspost.body }}
+			{{ newspost.body | striptags }}
 		</div>
 	</div>
 

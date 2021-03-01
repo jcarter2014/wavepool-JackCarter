@@ -32,6 +32,7 @@ def front_page(request):
 
 def newspost_detail(request, newspost_id=None):
     template = loader.get_template('wavepool/newspost.html')
+    # get the correct newspost by doing something like NewsPost.objects.get(id=newspost_id)
     newspost = NewsPost.objects.order_by('?').first()
     context = {
         'newspost': newspost
