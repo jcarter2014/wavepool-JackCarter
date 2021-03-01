@@ -21,6 +21,14 @@ class NewsPost(models.Model):
     is_cover_story = models.BooleanField(default=False)
     publish_date = models.DateField(default=timezone.now)
 
+    # add a __str__ method to show the title
+    def __str__(self):
+        return self.title
+
+    # add a Meta class for ordering
+    class Meta:
+        ordering = ['-publish_date']
+
     @property
     def url(self):
         return reverse('newspost_detail')
